@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 7H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/>
+          <rect x="9" y="3" width="6" height="4" rx="1"/>
+          <path d="M9 14h.01"/><path d="M13 14h2"/>
+          <path d="M9 17h.01"/><path d="M13 17h2"/>
+        </svg>
+      </div>
+      <span>CONSULTA HUB</span>
+    </a>
+    <div class="navbar-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="cpf.html" class="nav-link">CPF</a>
+      <a href="cnpj.html" class="nav-link">CNPJ</a>
+      <a href="engine.html" class="nav-link">Engine</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="header">
+      <div class="header-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 7H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/>
+            <rect x="9" y="3" width="6" height="4" rx="1"/>
+            <path d="M9 14h.01"/><path d="M13 14h2"/>
+            <path d="M9 17h.01"/><path d="M13 17h2"/>
+          </svg>
+        </div>
+        <h1>Consulta Hub</h1>
+      </div>
+      <p>Hub de ferramentas para consulta de CPF, CNPJ e geração de CPFs válidos</p>
+    </div>
+
+    <div class="tools-grid">
+
+      <a href="cpf.html" class="glass-card tool-card">
+        <div class="tool-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Consulta CPF</h3>
+        <p>Consulte CPFs em lote e descubra os nomes associados a cada um</p>
+        <div class="tool-card-arrow">
+          Acessar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a href="cnpj.html" class="glass-card tool-card">
+        <div class="tool-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 7H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/>
+            <rect x="9" y="3" width="6" height="4" rx="1"/>
+            <path d="M9 14h.01"/><path d="M13 14h2"/>
+            <path d="M9 17h.01"/><path d="M13 17h2"/>
+          </svg>
+        </div>
+        <h3>Consulta CNPJ</h3>
+        <p>Consulte dados completos de empresas pelo CNPJ — razão social, endereço, sócios e mais</p>
+        <div class="tool-card-arrow">
+          Acessar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <a href="engine.html" class="glass-card tool-card">
+        <div class="tool-card-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="4 17 10 11 4 5"/>
+            <line x1="12" y1="19" x2="20" y2="19"/>
+          </svg>
+        </div>
+        <h3>CPF Engine</h3>
+        <p>Gere todos os CPFs válidos a partir de um padrão com curingas usando Web Workers</p>
+        <div class="tool-card-arrow">
+          Acessar
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    Consulta Hub — Hub Desenvolvedor
+  </footer>
+
+</body>
+</html>

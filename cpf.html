@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta CPF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .error-box {
+      display: none;
+      padding: 1rem 1.2rem;
+      background: rgba(239,68,68,0.06);
+      border: 1px solid rgba(239,68,68,0.2);
+      border-radius: var(--radius-sm);
+      margin-bottom: 1rem;
+      width: 100%;
+      max-width: 540px;
+      animation: slideIn 0.3s ease;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .error-box.active { display: flex; }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <div class="brand-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 7H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/>
+          <rect x="9" y="3" width="6" height="4" rx="1"/>
+          <path d="M9 14h.01"/><path d="M13 14h2"/>
+          <path d="M9 17h.01"/><path d="M13 17h2"/>
+        </svg>
+      </div>
+      <span>CONSULTA HUB</span>
+    </a>
+    <div class="navbar-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="cpf.html" class="nav-link active">CPF</a>
+      <a href="cnpj.html" class="nav-link">CNPJ</a>
+      <a href="engine.html" class="nav-link">Engine</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="header">
+      <div class="header-logo">
+        <div class="logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+            <circle cx="9" cy="7" r="4"/>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h1>Consulta CPF</h1>
+      </div>
+      <p>Digite os CPFs para consultar o nome</p>
+    </div>
+
+    <div class="glass-card">
+      <div class="card-inner">
+
+        <div class="input-wrapper" style="width:100%; max-width:540px; margin-bottom:1.25rem;">
+          <textarea id="cpfs" placeholder="000.000.000-00&#10;111.111.111-11&#10;222.222.222-22"></textarea>
+        </div>
+
+        <div style="display:flex; gap:0.6rem; margin-bottom:0.5rem; width:100%; max-width:540px;">
+          <button id="btnConsultar" class="btn-primary" style="flex:1;">Consultar</button>
+          <button id="btnCopy" class="btn-secondary btn-success">Copiar</button>
+        </div>
+        <div class="input-hint" style="max-width:540px;">Um CPF por linha &bull; Ctrl+Enter para consultar</div>
+
+        <div id="errorBox" class="error-box">
+          <div class="error-icon">✕</div>
+          <div class="error-text">
+            <strong id="errorTitle">Erro</strong>
+            <span id="errorMsg"></span>
+          </div>
+        </div>
+
+        <div id="progressArea" class="progress-area" style="max-width:540px;">
+          <div class="progress-info">
+            <span id="progressText">0/0</span>
+            <span id="progressPct">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+        </div>
+
+        <div id="resultsArea" class="results-area" style="max-width:540px;">
+          <div class="results-header">
+            <div class="results-title">
+              Resultados
+              <span class="results-count" id="resultsCount">0</span>
+            </div>
+            <div class="filter-btns">
+              <button class="filter-btn active" data-filter="all">Todos</button>
+              <button class="filter-btn" data-filter="ok">Encontrados</button>
+              <button class="filter-btn" data-filter="error">Erros</button>
+            </div>
+          </div>
+          <div class="results-list" id="resultsList"></div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">Consulta CPF — Hub Desenvolvedor</footer>
+
+  <script src="script-cpf.js"></script>
+
+</body>
+</html>
